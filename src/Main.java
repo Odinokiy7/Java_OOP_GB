@@ -1,23 +1,57 @@
 import Units.*;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
 
-        Arbaletchik_1 arbaletchik = new Arbaletchik_1(100, 10, 5, 20);
-        Sniper_1 sniper = new Sniper_1(100, 5, 10, 10);
-        Koldun_2 koldun = new Koldun_2(100, 8, 7, 12);
-        Monah_2 monah = new Monah_2(100, 8, 7, 12);
-        Kopeyshik_3 kopeyshik = new Kopeyshik_3(100, 5, 10, 20);
-        Razboynik_3 razboynik = new Razboynik_3(100, 10, 5, 40);
-        Krestianin_4 krestianin = new Krestianin_4();
+        ArrayList<BasicHero> list = new ArrayList<>();
+        ArrayList<BasicHero> list2 = new ArrayList<>();
 
-        System.out.println(arbaletchik.getInfo());
-        System.out.println(sniper.getInfo());
-        System.out.println(koldun.getInfo());
-        System.out.println(monah.getInfo());
-        System.out.println(kopeyshik.getInfo());
-        System.out.println(razboynik.getInfo());
-        System.out.println(krestianin.getInfo());
+        for (int i = 0; i < 10; i++) {
+            switch (new Random().nextInt(4)) {
+                case 0:
+                    list.add(new Arbaletchik_1());
+                    break;
+                case 1:
+                    list.add(new Koldun_2());
+                    break;
+                case 2:
+                    list.add(new Kopeyshik_3());
+                    break;
+                case 3:
+                    list.add(new Krestianin_4());
+                    break;
+            }
 
+            switch (new Random().nextInt(4)) {
+                case 0:
+                    list2.add(new Sniper_1());
+                    break;
+                case 1:
+                    list2.add(new Monah_2());
+                    break;
+                case 2:
+                    list2.add(new Razboynik_3());
+                    break;
+                case 3:
+                    list2.add(new Krestianin_4());
+                    break;
+            }
+
+        }
+
+        System.out.println("Команда 1: ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).getInfo());
+        }
+
+        System.out.println("________________");
+
+        System.out.println("Команда 2: ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list2.get(i).getInfo());
+        }
     }
 }
