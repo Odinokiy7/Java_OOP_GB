@@ -13,7 +13,7 @@ public abstract class BasicHero implements UnitInterface {
 
     @Override
     public String getInfo() {
-        return String.format("Базовый воин - Hp: %f Speed: %d Damage: %d ",
+        return String.format("Базовый воин - Здоровье: %.1f Скорость: %d Урон: %d",
                 this.hp, this.speed, this.damage, this.getClass().getSimpleName());
     }
 
@@ -22,4 +22,15 @@ public abstract class BasicHero implements UnitInterface {
         return "Шаг - Базовый воин";
     }
 
+    public float getHp() {
+        return hp;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
 }

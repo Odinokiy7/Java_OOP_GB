@@ -1,11 +1,21 @@
 package Units;
 
 public abstract class ClassCloseCombat extends BasicHero implements UnitInterface {
-    protected int hit;
+    protected float attack;
+    protected float protection;
 
-    public ClassCloseCombat(float hp, int speed, int damage, int hit) {
+    public ClassCloseCombat(float hp, int speed, int damage, float attack, float protection) {
         super(hp, speed, damage);
-        this.hit = hit;
+        this.attack = attack;
+        this.protection = protection;
+    }
+
+    public float getAttack() {
+        return attack;
+    }
+
+    public float getProtection() {
+        return protection;
     }
 
 }
