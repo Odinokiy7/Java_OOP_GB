@@ -1,10 +1,12 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Копейщик
 public class Kopeyshik extends ClassCloseCombat {
 
-    public Kopeyshik() {
-        super(10, 4, 2, 4, 5);
+    public Kopeyshik(float hp, int speed, int damage, int x, int y, float attack, float protection) {
+        super(hp, speed, damage, x, y, attack, protection);
     }
 
     @Override
@@ -14,8 +16,13 @@ public class Kopeyshik extends ClassCloseCombat {
     }
 
     @Override
-    public String step() {
-        return "Копейщик нанёс удар";
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Копейщик нанес удар!");
+    }
+
+    @Override
+    public String toString() {
+        return "Копейщик: ";
     }
 
 }

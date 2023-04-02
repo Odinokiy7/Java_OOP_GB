@@ -1,11 +1,11 @@
 package Units;
 
-public abstract class ClassCloseCombat extends BasicHero implements UnitInterface {
+public abstract class ClassCloseCombat extends BasicHero implements BasicHeroInterface {
     protected float attack;
     protected float protection;
 
-    public ClassCloseCombat(float hp, int speed, int damage, float attack, float protection) {
-        super(hp, speed, damage);
+    public ClassCloseCombat(float hp, int speed, int damage, int x, int y, float attack, float protection) {
+        super(hp, speed, damage, x, y);
         this.attack = attack;
         this.protection = protection;
     }

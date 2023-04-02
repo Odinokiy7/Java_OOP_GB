@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Крестьянин
 public class Krestianin extends BasicHero {
 
@@ -7,11 +9,11 @@ public class Krestianin extends BasicHero {
     protected float protection;
     protected int delivery;
 
-    public Krestianin() {
-        super(1, 3, 1);
-        this.attack = 1;
-        this.protection = 1;
-        this.delivery = 1;
+    public Krestianin(float hp, int speed, int damage, int x, int y, float attack, float protection, int delivery) {
+        super(hp, speed, damage, x, y);
+        this.attack = attack;
+        this.protection = protection;
+        this.delivery = delivery;
     }
 
     @Override
@@ -21,8 +23,13 @@ public class Krestianin extends BasicHero {
     }
 
     @Override
-    public String step() {
-        return "Крестьянин принёс запасы";
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Крестьянин принёс запасы");
+    }
+
+    @Override
+    public String toString() {
+        return "Крестьянин: ";
     }
 
     public float getAttack() {

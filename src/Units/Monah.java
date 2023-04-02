@@ -1,10 +1,12 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Монах
 public class Monah extends ClassMagiciansCombat {
 
-    public Monah() {
-        super(30, 5, 4, 12, 7, 1);
+    public Monah(float hp, int speed, int damage, int x, int y, float attack, float protection, int spells) {
+        super(hp, speed, damage, x, y, attack, protection, spells);
     }
 
     @Override
@@ -14,8 +16,13 @@ public class Monah extends ClassMagiciansCombat {
     }
 
     @Override
-    public String step() {
-        return "Монах отработал";
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Монах отработал");
+    }
+
+    @Override
+    public String toString() {
+        return "Монах: ";
     }
 
 }

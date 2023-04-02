@@ -1,10 +1,12 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Разбойник
 public class Razboynik extends ClassCloseCombat {
 
-    public Razboynik() {
-        super(10, 6, 3, 8, 3);
+    public Razboynik(float hp, int speed, int damage, int x, int y, float attack, float protection) {
+        super(hp, speed, damage, x, y, attack, protection);
     }
 
     @Override
@@ -14,8 +16,13 @@ public class Razboynik extends ClassCloseCombat {
     }
 
     @Override
-    public String step() {
-        return "Разбойник нанёс удар";
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Разбойник нанес удар!");
+    }
+
+    @Override
+    public String toString() {
+        return "Разбойник: ";
     }
 
 }

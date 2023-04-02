@@ -1,10 +1,12 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Снайпер
 public class Sniper extends ClassRangedCombat {
 
-    public Sniper() {
-        super(15, 9, 8, 12, 10, 32);
+    public Sniper(float hp, int speed, int damage, int x, int y, float attack, float protection, int shots, int maxShots) {
+        super(hp, speed, damage, x, y, attack, protection, shots, maxShots);
     }
 
     @Override
@@ -14,8 +16,13 @@ public class Sniper extends ClassRangedCombat {
     }
 
     @Override
-    public String step() {
-        return "Снайпер выстрелил";
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Снайпер выстрелил!");
+    }
+
+    @Override
+    public String toString() {
+        return "Снайпер: ";
     }
 
 }

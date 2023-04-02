@@ -1,10 +1,12 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Колдун
 public class Koldun extends ClassMagiciansCombat {
 
-    public Koldun() {
-        super(30, 9, 5, 17, 12, 1);
+    public Koldun(float hp, int speed, int damage, int x, int y, float attack, float protection, int spells) {
+        super(hp, speed, damage, x, y, attack, protection, spells);
     }
 
     @Override
@@ -14,8 +16,18 @@ public class Koldun extends ClassMagiciansCombat {
     }
 
     @Override
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Колдун отработал!");
+    }
+
+    @Override
     public String step() {
         return "Колдун отработал";
+    }
+
+    @Override
+    public String toString() {
+        return "Колдун: ";
     }
 
 }

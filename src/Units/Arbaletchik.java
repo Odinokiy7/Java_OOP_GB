@@ -1,10 +1,12 @@
 package Units;
 
+import java.util.ArrayList;
+
 // Арбалетчик
 public class Arbaletchik extends ClassRangedCombat {
 
-    public Arbaletchik() {
-        super(10, 4, 2, 6, 3, 16);
+    public Arbaletchik(float hp, int speed, int damage, int x, int y, float attack, float protection, int shots, int maxShots) {
+        super(hp, speed, damage, x, y, attack, protection, shots, maxShots);
     }
 
     @Override
@@ -14,8 +16,12 @@ public class Arbaletchik extends ClassRangedCombat {
     }
 
     @Override
-    public String step() {
-        return "Арбалетчик выстрелил";
+    public void String(ArrayList<BasicHero> team) {
+        System.out.println("Арбалетчик выпустил стрелу!");
     }
 
+    @Override
+    public String toString() {
+        return "Арбалетчик: ";
+    }
 }
