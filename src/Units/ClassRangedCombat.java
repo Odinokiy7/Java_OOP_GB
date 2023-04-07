@@ -9,7 +9,7 @@ public abstract class ClassRangedCombat extends BasicHero implements BasicHeroIn
     protected int maxShots;
     protected int maxDamage;
 
-    public ClassRangedCombat(float hp, int speed, int damage, int x, int y, float attack, float protection, int shots, int maxShots, int maxDamage) {
+    public ClassRangedCombat(float hp, int speed, int damage, int x, int y, float attack, float protection, int shots, int maxShots) {
         super(hp, speed, damage, x, y);
         this.attack = attack;
         this.protection = protection;
@@ -18,7 +18,12 @@ public abstract class ClassRangedCombat extends BasicHero implements BasicHeroIn
         this.maxDamage = maxDamage;
     }
 
-//    @Override
+    @Override
+    public void step(ArrayList<BasicHero> team, ArrayList<BasicHero> whiteSide) {
+        super.step(team, whiteSide);
+    }
+
+    //    @Override
 //    public void step(ArrayList<BasicHero> team, ArrayList<BasicHero> friends) {
 //        if (this.shots > 0 && this.hp > 0) {
 //            System.out.println("Могу стрелять");

@@ -10,6 +10,11 @@ public class Kopeyshik extends ClassCloseCombat {
     }
 
     @Override
+    public String getName() {
+        return "Копейщик";
+    }
+
+    @Override
     public String getInfo() {
         return String.format("Копейщик - Атака: %.1f Защита %.1f Здоровье: %.1f Скорость: %d Урон: %d",
                 this.attack, this.protection, this.hp, this.speed, this.damage, this.getClass().getSimpleName());

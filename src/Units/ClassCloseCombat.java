@@ -1,5 +1,7 @@
 package Units;
 
+import java.util.ArrayList;
+
 public abstract class ClassCloseCombat extends BasicHero implements BasicHeroInterface {
     protected float attack;
     protected float protection;
@@ -8,6 +10,11 @@ public abstract class ClassCloseCombat extends BasicHero implements BasicHeroInt
         super(hp, speed, damage, x, y);
         this.attack = attack;
         this.protection = protection;
+    }
+
+    @Override
+    public void step(ArrayList<BasicHero> team, ArrayList<BasicHero> whiteSide) {
+        super.step(team, whiteSide);
     }
 
     public float getAttack() {

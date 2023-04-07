@@ -10,6 +10,16 @@ public class Monah extends ClassMagiciansCombat {
     }
 
     @Override
+    public String getName() {
+        return "Монах";
+    }
+
+    @Override
+    public String step() {
+        return null;
+    }
+
+    @Override
     public String getInfo() {
         return String.format("Монах - Атака: %.1f Защита %.1f Здоровье: %.1f Скорость: %d Урон: %d Магия: %d",
                 this.attack, this.protection, this.hp, this.speed, this.damage, this.spells, this.getClass().getSimpleName());

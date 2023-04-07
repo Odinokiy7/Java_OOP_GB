@@ -15,8 +15,8 @@ public abstract class ClassMagiciansCombat extends BasicHero implements BasicHer
     }
 
     @Override
-    public String step(ArrayList<BasicHero> team) {
-        return super.step(team);
+    public void step(ArrayList<BasicHero> team, ArrayList<BasicHero> whiteSide) {
+        super.step(team, whiteSide);
     }
 
     public float getAttack() {

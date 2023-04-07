@@ -10,6 +10,11 @@ public class Sniper extends ClassRangedCombat {
     }
 
     @Override
+    public String getName() {
+        return "Снайпер";
+    }
+
+    @Override
     public String getInfo() {
         return String.format("Снайпер - Атака: %.1f Защита %.1f Здоровье: %.1f Скорость: %d Урон: %d Стрелы: %d",
                 this.attack, this.protection, this.hp, this.speed, this.damage, this.shots, this.getClass().getSimpleName());

@@ -17,6 +17,11 @@ public class Krestianin extends BasicHero {
     }
 
     @Override
+    public String getName() {
+        return "Крестьянин";
+    }
+
+    @Override
     public String getInfo() {
         return String.format("Крестьянин - Атака: %.1f Защита %.1f Здоровье: %.1f Скорость: %d Урон: %d Доставка: %d",
                 this.attack, this.protection, this.hp, this.speed, this.damage, this.delivery, this.getClass().getSimpleName());
