@@ -16,9 +16,9 @@ public class Main {
         Init();
 
         while (true) {
-            Step();
             ConsoleView.view();
             sc.nextLine();
+            Step();
         }
     }
 
@@ -26,31 +26,31 @@ public class Main {
         for (int i = 1; i < GANG_SIZE + 1; i++) {
             switch (new Random().nextInt(4)) {
                 case 0:
-                    whiteSide.add(new Krestianin(1, 1, 1, 1, 1, 1, 1, 1));
+                    whiteSide.add(new Krestianin(1, i));
                     break;
                 case 1:
-                    whiteSide.add(new Razboynik(1, 1, 1, 1, 2, 1, 1));
+                    whiteSide.add(new Razboynik(1, i));
                     break;
                 case 2:
-                    whiteSide.add(new Sniper(1, 1, 1, 1, 3, 1, 1, 1, 1));
+                    whiteSide.add(new Sniper(1, i));
                     break;
-                case 3:
-                    whiteSide.add(new Koldun(1, 1, 1, 1, 4, 1, 1, 1));
+                default:
+                    whiteSide.add(new Koldun(1, i));
                     break;
             }
 
             switch (new Random().nextInt(4)) {
                 case 0:
-                    darkSide.add(new Krestianin(1, 1, 1, 10, 1, 1, 1, 1));
+                    darkSide.add(new Krestianin(10, i));
                     break;
                 case 1:
-                    darkSide.add(new Kopeyshik(1, 1, 1, 10, 2, 1, 1));
+                    darkSide.add(new Kopeyshik(10, i));
                     break;
                 case 2:
-                    darkSide.add(new Arbaletchik(1, 1, 1, 10, 3, 1, 1, 1, 1));
+                    darkSide.add(new Arbaletchik(10, i));
                     break;
-                case 3:
-                    darkSide.add(new Monah(1, 1, 1, 10, 4, 1, 1, 1));
+                default:
+                    darkSide.add(new Monah(10, i));
                     break;
             }
 
