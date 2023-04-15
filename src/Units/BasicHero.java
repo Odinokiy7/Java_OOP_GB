@@ -5,7 +5,7 @@ import java.util.Random;
 
 public abstract class BasicHero implements BasicHeroInterface {
 
-    protected static Random r = new Random();
+//    protected static Random r = new Random();
 
     protected int hp;
     protected int maxHp;
@@ -27,17 +27,6 @@ public abstract class BasicHero implements BasicHeroInterface {
         position = new Position(x, y);
     }
 
-//    public BasicHero(float hp, int speed, int damage, int x, int y) {
-//        this.hp = hp;
-//        this.maxHp = hp;
-//        this.speed = speed;
-//        this.damage = damage;
-//        this.attack = attack;
-//        this.protection = protection;
-//        position = new Position(x, y);
-//        state = "Stand";
-//    }
-
     public String getName() {
         return "Базовый воин";
     }
@@ -45,13 +34,6 @@ public abstract class BasicHero implements BasicHeroInterface {
     @Override
     public void step(ArrayList<BasicHero> team, ArrayList<BasicHero> friends) {
     }
-
-//    @Override
-//    public String getInfo() {
-//        String outStr = String.format("\t%-3s\t⚔️ %-3d\t\uD83D\uDEE1 %-3d\t♥️%-3d%%\t☠️%-3d\t ",
-//                attack, protection, (int) hp * 100 / maxHp, damage);
-//        return outStr;
-//    }
 
     @Override
     public String getInfo() {
